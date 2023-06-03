@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobby</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="logo"><img src="img/logo.svg" alt=""></div>
+        <div class="hamburger">
+            <div class="burger"><img src="img/burger.svg" alt=""></div>
+            <div class="burger_close"><img src="img/menu_close.svg" alt=""></div>
+        </div>
+    </nav>
+    <div class="menu">
+        <ul>
+            <li><a class="menuItem" href="#block1">Home</a></li>
+            <li><a class="menuItem" href="#block2">About us</a></li>
+            <li><a class="menuItem" href="#block3">Choose plant</a></li>
+            <li><a class="menuItem" href="#block5">FAQ</a></li>
+            <li><a class="menuItem" id="login" href="#">Login</a></li>
+        </ul>
+    </div>
+    <section class="container" id="block1">
+        <div class="block1_left">
+            <div class="block1_title">Make a <span class="colortext">Beautiful Garden</span> with Your own Hand</div>
+            <div class="block1_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</div>
+        </div>
+        <img class="block1_right" src="img/block1.svg" alt="">
+    </section>
+    <section class="container">
+        <div class="block2" id="block2">
+            <div class="block2_left"><img src="img/block2.svg" alt=""></div>
+            <div class="block2_right">
+                <div class="block2_title">We Are Professional Gardener!</div>
+                <div class="block2_text">Morbi magna metus, scelerisque at risus a, tristique laoreet orci. Duis posuere eros vel dui pulvinar, pulvinar molestie erat iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia.</div>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="block3" id="block3">
+            <div class="block3_title">Choose your Dream Plant</div>
+            <div class="block3_text">Many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</div>
+            <div class="filtr" id="myBtnContainer">
+                <button class="btn active" onclick="filterSelection('all')">All plants</button>
+                <button class="btn" onclick="filterSelection('Tropical')">Tropical</button>
+                <button class="btn" onclick="filterSelection('Monstera')">Monstera</button>
+            </div>
+            <div class="block3_elements">
+                <div class="filterDiv Tropical">
+                    <div class="block3_img"><img src="img/block3_1.png" alt=""></div>
+                    <div class="block3_elem_title">Indoors Tropical Plant</div>
+                    <div class="block3_elem_bottom">
+                        <div class="block3_price">
+                            <div class="block3_price_text">Price</div>
+                            <div class="block3_price_price">$150</div>
+                        </div>
+                        <div id="show-modal-btn1"><button class="block3_button">Read more</button></div>
+                    </div>
+                </div>
+                <div class="filterDiv Monstera">
+                    <div class="block3_img"><img src="img/block3_2.png" alt=""></div>
+                    <div class="block3_elem_title">Monstera Deliciosa Care</div>
+                    <div class="block3_elem_bottom">
+                        <div class="block3_price">
+                            <div class="block3_price_text">Price</div>
+                            <div class="block3_price_price">$200</div>
+                        </div>
+                        <div id="show-modal-btn2"><button class="block3_button">Read more</button></div>
+                    </div>
+                </div>
+                <div class="filterDiv Monstera">
+                    <div class="block3_img"><img src="img/block3_3.png" alt=""></div>
+                    <div class="block3_elem_title">Monstera Leaf Potted</div>
+                    <div class="block3_elem_bottom">
+                        <div class="block3_price">
+                            <div class="block3_price_text">Price</div>
+                            <div class="block3_price_price">$150</div>
+                        </div>
+                        <div id="show-modal-btn3"><button class="block3_button">Read more</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <dialog id="dialog1">
+            <div id="modal-box1">
+                <div class="block3_img"><img src="img/block3_1.png" alt=""></div>
+                <div class="modal-box-title">Indoors Tropical Plant</div>
+                <div class="modal-box-text">With the help of exotic plants, which are characterized by unusual inflorescences, appearance and large foliage, you can create a tropical atmosphere in the room. </div>
+                <div id="modalbox_butt" class="block3_button">Add to cart</div>
+                <button id="close-modal-btn1"></button>
+            </div>
+        </dialog>
+        <dialog id="dialog2">
+            <div id="modal-box2">
+                <div class="block3_img"><img src="img/block3_2.png" alt=""></div>
+                <div class="modal-box-title">Monstera Deliciosa Care</div>
+                <div class="modal-box-text">With the help of exotic plants, which are characterized by unusual inflorescences, appearance and large foliage, you can create a tropical atmosphere in the room. </div>
+                <div id="modalbox_butt" class="block3_button">Add to cart</div>
+                <button id="close-modal-btn2"></button>
+            </div>
+        </dialog>
+        <dialog id="dialog3">
+            <div id="modal-box3">
+                <div class="block3_img"><img src="img/block3_3.png" alt=""></div>
+                <div class="modal-box-title">Monstera Leaf Potted</div>
+                <div class="modal-box-text">With the help of exotic plants, which are characterized by unusual inflorescences, appearance and large foliage, you can create a tropical atmosphere in the room. </div>
+                <div id="modalbox_butt" class="block3_button">Add to cart</div>
+                <button id="close-modal-btn3"></button>
+            </div>
+        </dialog>
+    </section>
+    <section class="container">
+        <div class="block4">
+            <div class="block4_title">Why choose us</div>
+            <div class="block4_tabs" id="myBtnContainer1">
+                <button class="btn" onclick="hello('feedback')">Feedback</button>
+                <button class="btn" onclick="hello('largeselection')">Large selection</button>
+                <button class="btn" id="reviews1" onclick="hello('reviews')">Reviews</button>
+            </div>
+            <div id="feedback" class="tab">
+                <div class="tab_text">At our flower shop, we are dedicated to providing the best possible service and experience for our customers. We understand that choosing the perfect bouquet or arrangement can be a daunting task, which is why we are here to help. Our team of knowledgeable florists is always available to answer any questions you may have and provide expert advice on selecting the perfect flowers for any occasion.</div>
+                <div class="tab_img"><img src="img/block4_1.jpg" alt=""></div>
+            </div>
+            <div id="largeselection" class="tab" style="display: none">
+                <div class="tab_text">Our plant store offers a wide selection of plants to choose from. Whether you're looking for indoor or outdoor plants, succulents or flowers, we have it all. With our vast array of options, you're sure to find the perfect plant to fit your style and needs. Our knowledgeable staff is always available to assist you in making the best choice for your home or garden. Come visit us today and explore our extensive collection of plants!</div>
+                <div class="tab_img"><img src="img/block4_2.jpg" alt=""></div>
+            </div>
+            <div id="reviews" class="tab" style="display: none">
+                <div class="tab_text">Our plant store has received numerous positive reviews from satisfied customers. They rave about the quality and variety of our plants, as well as the helpfulness of our staff. Many have even shared photos of their beautiful gardens and thriving indoor plants that they purchased from us. We take pride in providing excellent service and products, and it shows through our customers' glowing feedback. Come see for yourself why so many people love shopping at our plant store!</div>
+                <div class="tab_img"><img src="img/block4_3.jpg" alt=""></div>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="block5" id="block5">
+            <div class="block5_title">FAQ</div>
+            <div class="block5_faq">
+                <div class="block5_img"><img src="img/block5.jpg" alt=""></div>
+                <div class="block5_acc">
+                    <div class="acc_elem">
+                        <button class="accordion">What happens if I don't like the flower?</button>
+                        <div class="panel">
+                            <p class="panel_p">If you don't like the flower, you can contact us and we will try to find a suitable replacement or offer a refund</p>
+                        </div>
+                    </div>
+                    <div class="acc_elem">
+                        <button class="accordion">What if I'm allergic to some flowers?</button>
+                        <div class="panel">
+                            <p class="panel_p">If you are allergic to some flowers, we recommend that you consult with a medical professional before purchasing any plants. However, if you do experience an allergic reaction after purchasing a plant from us, please let us know and we will work with you to find a solution.</p>
+                        </div>
+                    </div>
+                    <div class="acc_elem">
+                        <button class="accordion">Can I order plants online?</button>
+                        <div class="panel">
+                            <p class="panel_p">For your convenience, we have an online store where you can browse our selection of plants and place orders from the comfort of your own home. We offer secure payment options and fast, reliable shipping.</p>
+                        </div>
+                    </div>
+                    <div class="acc_elem">
+                        <button class="accordion">Do you offer gardening advice?</button>
+                        <div class="panel">
+                            <p class="panel_p">Our knowledgeable staff are passionate about gardening and are always happy to share their expertise with customers. Whether you need advice on plant care, landscaping ideas, or pest control solutions, we are here to help.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="block6">
+                <div class="block6_title">Our clients</div>
+                <div id="slides">
+                    <div class="slide showing"><img src="img/block6_1.jpg" alt=""></div>
+                    <div class="slide"><img src="img/block6_2.jpg" alt=""></div>
+                    <div class="slide"><img src="img/block6_3.jpg" alt=""></div>
+                    <div class="slide"><img src="img/block6_4.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="block7">
+                <div class="block7_logo"><img class="block7_img" src="img/logo.svg" alt=""></div>
+                <div class="block7_nav">
+                    <a class="block7_a" href="#block1">Home</a>
+                    <a class="block7_a" href="#block2">About us</a>
+                    <a class="block7_a" href="#block3">Choose plant</a>
+                    <a class="block7_a" href="#block5">FAQ</a>
+                </div>
+            </div>
+            <div class="block7_line"></div>
+        </div>
+    </section>
+    <script src="/js/main.js"></script>
+</body>
+</html>
